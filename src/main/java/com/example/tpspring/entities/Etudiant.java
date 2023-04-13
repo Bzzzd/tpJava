@@ -1,6 +1,15 @@
 package com.example.tpspring.entities;
 
 import javax.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 
 
 @Entity
@@ -8,7 +17,7 @@ import javax.persistence.*;
 public class Etudiant {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    int idE;
+    long idE;
 
     @Column(name="Nom")
     String nom;
